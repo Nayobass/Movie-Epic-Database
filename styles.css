@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sixtyfour Convergence',serif;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(purple, orange);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-star {
+    color: rgba(242, 106, 15, 0.883);
+    transition: all 300ms ease;
+    transform: rotate(180deg);
+}
