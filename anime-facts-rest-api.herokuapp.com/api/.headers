@@ -1,0 +1,11 @@
+[
+  {
+    "applyTo": "v1",
+    "headers": [
+      {
+        "name": "access-allow",
+        "value": "header value"
+      }
+    ]
+  }
+]
