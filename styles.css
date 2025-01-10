@@ -91,16 +91,18 @@ h3 {
 /* RESULT */
 
 .result-list {
-    width: auto;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .result {
     width: 25%;
+    display: flex;
 }
 
 .result-card {
+    width: 30%;
     margin: 10px;
     border-radius: 5px;
     border: 2px solid orange;
