@@ -99,10 +99,12 @@ h3 {
 .result {
     width: 25%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .result-card {
     width: 30%;
+    height: 10%;
     margin: 10px;
     border-radius: 5px;
     border: 2px solid orange;
