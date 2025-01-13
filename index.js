@@ -1,7 +1,9 @@
 // API: http://www.omdbapi.com/?i=tt3896198&apikey=209fb069
 
-async function movieResult() {
-    const movies = await fetch("http://www.omdbapi.com/?s=star_wars&apikey=209fb069");
+const searchBar = document.getElementById("search-bar")
+
+async function movieResult(name) {
+    const movies = await fetch(`http://www.omdbapi.com/?s=${name}&apikey=209fb069`);
     const moviesData = await movies.json();
     const resultListEl = document.querySelector(".result-list")
     console.log(moviesData.Search)
@@ -19,5 +21,5 @@ async function movieResult() {
     .join("")
 }
 
-movieResult();
+// movieResult("godzilla");
 
