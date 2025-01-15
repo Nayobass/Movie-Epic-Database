@@ -16,7 +16,7 @@
             </div>
             <p class="mainpara">The cinema enthusiast's search engine!</p>
             <div class="mainsearch">
-                <input type="text" id="search-bar" placeholder="Search"><button id="search-button">Go</button>
+                <input type="text" id="search-bar" onchange="retrieveInput()" placeholder="Search"><button onclick="retrieveInput()">Go</button>
             </div>
         </div>
         <div class="container">
@@ -25,9 +25,9 @@
                     <div class="result-card">
                         <div class="result-card__container">
                            <img class="cardimage" src="/assets/lotr.jpg" alt="">
-                           <h3>Title</h3>
-                           <p class="cardpara"><b>Year:</b> year</p>
-                           <p class="cardpara"><b>Type:</b> type</p> 
+                           <h3>The Lord of the Rings: The Fellowship of the Ring</h3>
+                           <p class="cardpara"><b>Year:</b> 2001</p>
+                           <p class="cardpara"><b>Type:</b> movie</p> 
                         </div>
                     </div>
                 </div>

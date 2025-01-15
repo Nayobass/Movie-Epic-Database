@@ -1,13 +1,3 @@
-// API: http://www.omdbapi.com/?i=tt3896198&apikey=209fb069
-
-const searchInput = document.getElementById('search-bar');
-const searchButton = document.getElementById('search-button')
-
-searchButton.addEventListener('click', () => {
-    const searchTerm = searchInput.value
-    console.log(searchTerm)
-})
-
 async function movieResult(name) {
     const movies = await fetch(`http://www.omdbapi.com/?s=${name}&apikey=209fb069`);
     const moviesData = await movies.json();
@@ -25,6 +15,11 @@ async function movieResult(name) {
             </div>`
     )
     .join("")
+}
+
+function retrieveInput() {
+    const inputValue = document.getElementById('search-bar').value;
+    movieResult(inputValue);
 }
 
 // movieResult("godzilla");
