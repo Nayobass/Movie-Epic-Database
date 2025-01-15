@@ -16,19 +16,24 @@
             </div>
             <p class="mainpara">The cinema enthusiast's search engine!</p>
             <div class="mainsearch">
-                <input type="text" id="search-bar" onchange="retrieveInput()" placeholder="Search"><button onclick="retrieveInput()">Go</button>
+                <div class="search-query">
+                    <input type="text" id="search-bar" onchange="retrieveInput()" placeholder="Search"><button onclick="retrieveInput()">Go</button>
+                </div>
+                <select id="filter" onchange="filterMovies(event)">
+                    <option value="" disable selected>Sort</option>
+                    <option value="OLD_TO_NEW">Oldest to most recent</option>
+                    <option value="NEW_TO_OLD">Most recent to oldest</option>
+                </select>
             </div>
         </div>
         <div class="container">
             <div class="result-list">
-                <div class="result">
-                    <div class="result-card">
-                        <div class="result-card__container">
-                           <img class="cardimage" src="/assets/lotr.jpg" alt="">
-                           <h3>The Lord of the Rings: The Fellowship of the Ring</h3>
-                           <p class="cardpara"><b>Year:</b> 2001</p>
-                           <p class="cardpara"><b>Type:</b> movie</p> 
-                        </div>
+                <div class="result-card">
+                    <div class="result-card__container">
+                        <img class="cardimage" src="/assets/lotr.jpg" alt="">
+                        <h3>The Lord of the Rings: The Fellowship of the Ring</h3>
+                        <p class="cardpara"><b>Year:</b> 2001</p>
+                        <p class="cardpara"><b>Type:</b> movie</p> 
                     </div>
                 </div>
             </div>

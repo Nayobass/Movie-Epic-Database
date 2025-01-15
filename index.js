@@ -22,5 +22,16 @@ function retrieveInput() {
     movieResult(inputValue);
 }
 
-// movieResult("godzilla");
+function getArray() {
+    const newArray = []
+    retrieveInput();
+    newArray.push(retrieveInput())
 
+    console.log(newArray)
+}
+
+function filterMovies(event) {
+    movieResult(event.target.value)
+}
+
+getArray();
