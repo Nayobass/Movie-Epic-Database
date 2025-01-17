@@ -1,15 +1,14 @@
-function userSearchInput(event) {
-    searchInput = event.target.value
-    sessionStorage.setItem("searchInput", searchInput)
-    window.location.href = "./index.html"
-}
-
-const inputMovie = sessionStorage.getItem("searchInput")
 const movieElement = document.querySelector(".result-list")
 const resultContainer = document.querySelector(".container")
 
+function userSearchInput(event) {
+    setTimeout(() => {
+        renderMovies(event.target.value)
+    }, 1000)
+}
+
 async function renderMovies(filter) {
-    const movies = await fetch(`http://www.omdbapi.com/?s=${inputMovie}&apikey=209fb069`);
+    const movies = await fetch(`http://www.omdbapi.com/?s=${filter}&apikey=209fb069`);
 
     const moviesData = await movies.json();
 
