@@ -1,10 +1,18 @@
+function userSearchInput(event) {
+    searchInput = event.target.value
+    sessionStorage.setItem("searchInput", searchInput)
+    window.location.href = "./index.html"
+}
+
 const inputMovie = sessionStorage.getItem("searchInput")
 const movieElement = document.querySelector(".result-list")
+const resultContainer = document.querySelector(".container")
 
 async function renderMovies(filter) {
     const movies = await fetch(`http://www.omdbapi.com/?s=${inputMovie}&apikey=209fb069`);
 
     const moviesData = await movies.json();
+
     if (filter === "OLD_TO_NEW") {
         moviesData.Search.sort((a, b) => a.Year - b.Year)
     }
@@ -28,6 +36,3 @@ async function renderMovies(filter) {
 function filterMovies(event) {
     renderMovies(event.target.value)
 }
-setTimeout(() => {
-    renderMovies();
-}, 1000)
