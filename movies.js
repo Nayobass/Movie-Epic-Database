@@ -14,7 +14,7 @@ function userSearchInput(event) {
 async function renderMovies(filter) {
     const userInput = document.getElementById("search-bar").value;
 
-    const movies = await fetch(`http://www.omdbapi.com/?s=${userInput || ""})}&apikey=209fb069`);
+    const movies = await fetch(`https://www.omdbapi.com/?s=${userInput || ""})}&apikey=209fb069`);
 
     const moviesData = await movies.json();
     

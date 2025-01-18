@@ -190,12 +190,6 @@ h3 {
     }
 }
 
-@media (max-width: 820px) {
-    .fa-star, .fa-solid {
-        visibility: hidden;
-    }
-}
-
 @media (max-width: 700px) {
     h1 {
         text-align: center;
