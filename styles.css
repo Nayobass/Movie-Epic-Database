@@ -191,8 +191,8 @@ h3 {
 }
 
 @media (max-width: 820px) {
-    .fa-star {
-        display: none;
+    .fa-star, .fa-solid {
+        visibility: hidden;
     }
 }
 
